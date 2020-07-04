@@ -18,6 +18,7 @@ import sys
 sys.path.append(".")
 sys.path.append("../")
 sys.path.append("../../");
+sys.path.append("/content/drive/My Drive/TensorflowTTS/TensorflowTTS");
 
 from tensorflow_tts.optimizers import AdamWeightDecay
 from tensorflow_tts.optimizers import WarmUp
