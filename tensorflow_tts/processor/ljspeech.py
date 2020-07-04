@@ -101,7 +101,8 @@ _pad = "_"
 _eos = "~"
 _punctuation = "!'(),.:;? "
 _special = "-"
-_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+#_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+_letters = "АБВГДЃЕЖЗЅИЈКЛЉМНЊОПРСТЌУФХЦЧЏШабвгдѓежзѕијклљмнњопрстќуфхцчџш"
 
 # Prepend "@" to ARPAbet symbols to ensure uniqueness (some are the same as uppercase letters):
 _arpabet = ["@" + s for s in valid_symbols]
@@ -132,8 +133,8 @@ class LJSpeechProcessor(object):
             with open(os.path.join(root_path, "metadata.csv"), encoding="utf-8") as ttf:
                 for line in ttf:
                     parts = line.strip().split("|")
-                    wav_path = os.path.join(root_path, "wavs", "%s.wav" % parts[0])
-                    text = parts[2]
+                    wav_path = os.path.join(root_path, "wavs", "%s" % parts[0])
+                    text = parts[1]
                     items.append([text, wav_path, self.speaker_name])
 
             self.items = items
