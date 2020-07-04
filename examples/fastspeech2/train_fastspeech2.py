@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Train FastSpeech2."""
+import sys
 
 sys.path.append(".")
 sys.path.append("../")
@@ -32,7 +33,7 @@ import numpy as np
 import argparse
 import logging
 import os
-import sys
+
 
 
 
