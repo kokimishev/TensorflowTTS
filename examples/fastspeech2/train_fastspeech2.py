@@ -14,6 +14,10 @@
 # limitations under the License.
 """Train FastSpeech2."""
 
+sys.path.append(".")
+sys.path.append("../")
+sys.path.append("../../");
+
 from tensorflow_tts.optimizers import AdamWeightDecay
 from tensorflow_tts.optimizers import WarmUp
 from tensorflow_tts.models import TFFastSpeech2
@@ -29,7 +33,7 @@ import argparse
 import logging
 import os
 import sys
-sys.path.append(".")
+
 
 
 class FastSpeech2Trainer(FastSpeechTrainer):
