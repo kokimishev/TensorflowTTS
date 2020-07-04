@@ -22,7 +22,7 @@ from tensorflow_tts.optimizers import WarmUp
 from tensorflow_tts.models import TFFastSpeech2
 from tensorflow_tts.configs import FastSpeech2Config
 from examples2.fastspeech2.fastspeech2_dataset import CharactorDurationF0EnergyMelDataset
-from examples2.fastspeech2.train_fastspeech import FastSpeechTrainer
+from examples2.fastspeech.train_fastspeech import FastSpeechTrainer
 from tqdm import tqdm
 import tensorflow_tts
 import yaml
