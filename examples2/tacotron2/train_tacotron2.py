@@ -113,9 +113,9 @@ class Tacotron2Trainer(Seq2SeqBasedTrainer):
     def _train_step(self, batch):
         """Train model one step."""
         charactor, char_length, mel, mel_length, guided_attention = batch
-        self.(
+        self._one_step_tacotron2(
             charactor, char_length, mel, mel_length, guided_attention
-        )_one_step_tacotron2
+        )
 
         # update counts
         self.steps += 1
@@ -152,6 +152,7 @@ class Tacotron2Trainer(Seq2SeqBasedTrainer):
                 mel_lengths=mel_length,
                 training=True,
             )
+
             # calculate mel loss.
             mel_loss_before = self.mae(mel, mel_outputs)
             mel_loss_after = self.mae(mel, post_mel_outputs)
