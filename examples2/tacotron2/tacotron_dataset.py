@@ -107,8 +107,8 @@ class CharactorMelDataset(AbstractDataset):
                     f"({len(mel_files)} -> {len(idxs)})."
                 )
             mel_files = [mel_files[idx] for idx in idxs]
-            len(charactor_files);
-            len(idxs);
+            print(len(charactor_files));
+            print(len(idxs));
             
             charactor_files = [charactor_files[idx] for idx in idxs]
             mel_lengths = [mel_lengths[idx] for idx in idxs]
