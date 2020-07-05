@@ -152,7 +152,8 @@ class Tacotron2Trainer(Seq2SeqBasedTrainer):
                 mel_lengths=mel_length,
                 training=True,
             )
-
+            print(mel.shape);
+            print(mel_outputs.shape);
             # calculate mel loss.
             mel_loss_before = self.mae(mel, mel_outputs)
             mel_loss_after = self.mae(mel, post_mel_outputs)
