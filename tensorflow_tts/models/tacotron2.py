@@ -742,7 +742,7 @@ class TFTacotron2(tf.keras.Model):
         speaker_ids,
         mel_outputs,
         mel_lengths,
-        maximum_iterations=2000,
+        maximum_iterations=4000,
         use_window_mask=False,
         win_front=2,
         win_back=3,
